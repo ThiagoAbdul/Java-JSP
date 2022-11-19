@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+@keyframes subir {
+    from {margin-top: 50vh;}
+    to {margin-top: 2em; }
+}
+
+@keyframes lado {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: 39vw;
+    }
+}
+
+@keyframes aparecer {
+    from {color: #fff;}
+    to {color: #000;}
+}
+
+:root{
+    --cor-agenda: #2878A3;
+    --cor2: #0a3051;
+    --cor3: #0e3e6b;
+    --preto: #0a0a0a;
+    --cor-clara: #2c84b3;
+    --translucido: #2c84b388;
+    --off-white: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-y: hidden;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: var(--preto);
+}
+
+header p, header a{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 2em;
+    text-align: center;
+    
+}
+
+.principal {
+    
+    margin: auto;
+    margin-top: 2em;
+    padding: 1em;
+    animation-name: subir;
+    animation-duration: 1s;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+main {
+    background-color: var(--cor-agenda);
+    border-radius: 10px;
+    width: 400px; 
+
+}
+
+.container-img {
+    width: 300px;
+    margin: auto;
+    margin-top: 2em;
+    padding: 1em;
+    text-align: center;
+    animation-name: lado;
+    animation-duration: 1s;
+}
+
+img{
+    cursor: pointer;
+    margin: auto; 
+}
+
+p {
+    text-align: center;
+    padding: 8px;
+    margin-top: 8px;   
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+a:hover{
+    color: var(--cor-agenda);
+    transition-duration: .2s;
+}
+
+a:active{
+    color: darkgray;
+}
+
+form input{
+    width: 100%;
+    outline: none;
+    padding: 4px;
+}
+
+.campos input{
+
+    margin-bottom: 8px;
+}
+
+input[type="button"]{
+    
+    background-color: var(--cor2);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    animation-name: aparecer;
+    animation-direction: 2s;
+}
+
+input[type="button"]:hover{
+    
+    background-color: var(--cor3);
+    transition-duration: .25s;
+}
+
+footer{
+    position: absolute;
+    bottom: 0vh;
+    width: 100%;
+    background-color: var(--preto);
+    color: white;
+    
+}
+
+footer p{
+    
+    font-weight: bold;
+    padding: 2px;
+}
+
+.aparecer {
+    animation-name: aparecer;
+    animation-duration: 2s;
+}
+
+#tabela {
+    overflow-y: auto;
+    height: 400px;
+}
+
+table {
+    border-collapse: collapse;
+    position: relative;
+}
+
+thead > tr {position: sticky; top: -1px;}
+
+tbody > tr:nth-child(odd){
+    background-color: var(--off-white);
+}
+
+tbody > tr:hover {
+    background-color: var(--cor-clara);
+    color: white;
+}
+
+th {
+    border: 1px solid #000;
+    padding: 4px;
+}
+
+th{
+    background-color: var(--cor-agenda);
+    color: black;
+}
+
+th:hover{
+    background-color: var(--cor-clara);
+    transition-duration: .25s;
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 8px;
+}
